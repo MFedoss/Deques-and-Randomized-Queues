@@ -85,6 +85,10 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     	return new ListIterator();
     }
     
+	// So, to make the iterator random I used the Deque class (the previous file)
+	// and randomly added elements either to the front or to the back. I had to
+	// do so because only a few libraries were allowed! I couldnt use normal 
+	// linked lists or array lists and Collections.shuffle command.
     private Deque<Item> generate() {
     	Deque<Item> dek = new Deque<Item>();
     	Node current = first;
